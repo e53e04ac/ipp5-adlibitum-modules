@@ -1,0 +1,29 @@
+{
+  "name": "ipp5-adlibitum-modules",
+  "version": "0.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "MIT",
+  "author": "e53e04ac",
+  "homepage": "https://github.com/e53e04ac/ipp5-adlibitum-modules#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/e53e04ac/ipp5-adlibitum-modules.git"
+  },
+  "bugs": {
+    "url": "https://github.com/e53e04ac/ipp5-adlibitum-modules/issues"
+  },
+  "type": "module",
+  "types": "./index.d.ts",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "hold": "github:e53e04ac/hold",
+    "ipp5-adlibitum-esm-loader": "github:e53e04ac/ipp5-adlibitum-esm-loader"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.18"
+  }
+}
