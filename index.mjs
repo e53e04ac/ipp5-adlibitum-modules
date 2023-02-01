@@ -11,7 +11,7 @@ import { resolve as pathResolve } from 'node:path';
 import { Ipp5AdlibitumEsmLoader } from 'ipp5-adlibitum-esm-loader';
 import { hold } from 'hold';
 
-/** @type {import('./').Ipp5AdlibitumModules.Constructor} */
+/** @type {import('.').Ipp5AdlibitumModules.Constructor} */
 const constructor = ((options) => {
 
     /** @typedef {Required<typeof options>['__GenericTypes__']} GenericTypes */
@@ -19,7 +19,7 @@ const constructor = ((options) => {
 
     const _options = ({});
 
-    /** @type {import('./').Ipp5AdlibitumModules._Self<TModuleMap>} */
+    /** @type {import('.').Ipp5AdlibitumModules._Self<TModuleMap>} */
     const _self = ({
         options: (() => {
             return options;
@@ -59,7 +59,7 @@ const constructor = ((options) => {
         }),
     });
 
-    /** @type {import('./').Ipp5AdlibitumModules.Self<TModuleMap>} */
+    /** @type {import('.').Ipp5AdlibitumModules.Self<TModuleMap>} */
     const self = ({
         _Ipp5AdlibitumModules: (() => {
             return _self;
@@ -145,9 +145,10 @@ const constructor = ((options) => {
 
 });
 
-/** @type {import('./').Ipp5AdlibitumModules.Companion} */
+/** @type {import('.').Ipp5AdlibitumModules.Companion} */
 const companion = ({});
 
+/** @type {import('.').Ipp5AdlibitumModules.ConstructorWithCompanion} */
 const constructorWithCompanion = Object.assign(constructor, companion);
 
 export { constructorWithCompanion as Ipp5AdlibitumModules };
