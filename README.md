@@ -5,7 +5,7 @@ npm install e53e04ac/ipp5-adlibitum-modules
 ~~~~~
 
 ~~~~~ mjs
-import { Ipp5AdlibitumModules } from 'e53e04ac/ipp5-adlibitum-modules';
+import { const Ipp5AdlibitumModules } from 'e53e04ac/ipp5-adlibitum-modules';
 ~~~~~
 
 ~~~~~ mermaid
@@ -21,39 +21,47 @@ graph RL;
   A ----> B_0;
   A ----> B_1;
   A ----> B_2;
-  click B_0 "https://github.com/e53e04ac/hold/tree/285d028e225a7e75747417c3ed6b1ca0d5f52f6a";
-  click B_1 "https://github.com/e53e04ac/ipp5-adlibitum-esm-loader/tree/48b895277ced3af33e185b80bc4a9fe3238d594f";
+  click B_0 "https://github.com/e53e04ac/hold/tree/8fc3f6696d1c7ed6d184d90c5e33298cc9228991";
+  click B_1 "https://github.com/e53e04ac/ipp5-adlibitum-esm-loader/tree/3734dd4cc39b5b66e79912e72e9dbe7661eb9038";
   click B_2 "https://www.npmjs.org/package/@types/node/v/18.13.0";
 ~~~~~
 
 ~~~~~ mermaid
-graph LR;
-  A(["index.mjs"])
+graph RL;
+  subgraph "e53e04ac/ipp5-adlibitum-modules";
+    E_0(["Ipp5AdlibitumModules"]);
+  end;
+  M(["index.mjs"])
   subgraph "node:fs";
-    B_0_0(["readFileSync"]);
+    I_0_0(["readFileSync"]);
   end;
   subgraph "node:path";
-    B_1_0(["dirname"]);
-    B_1_1(["resolve"]);
+    I_1_0(["dirname"]);
+    I_1_1(["resolve"]);
   end;
   subgraph "ipp5-adlibitum-esm-loader";
-    B_2_0(["Ipp5AdlibitumEsmLoader"]);
+    I_2_0(["Ipp5AdlibitumEsmLoader"]);
   end;
   subgraph "hold";
-    B_3_0(["hold"]);
+    I_3_0(["hold"]);
   end;
-  B_0_0 ----> A;
-  B_1_0 ----> A;
-  B_1_1 ----> A;
-  B_2_0 ----> A;
-  B_3_0 ----> A;
+  M ----> I_0_0;
+  M ----> I_1_0;
+  M ----> I_1_1;
+  M ----> I_2_0;
+  M ----> I_3_0;
+  E_0 ----> M;
 ~~~~~
 
 ~~~~~ mermaid
-graph LR;
-  A(["index.d.ts"])
-  subgraph "ipp5-adlibitum-esm-loader";
-    B_0_0(["Ipp5AdlibitumEsmLoader"]);
+graph RL;
+  subgraph "e53e04ac/ipp5-adlibitum-modules";
+    E_0(["const Ipp5AdlibitumModules"]);
   end;
-  B_0_0 ----> A;
+  M(["index.d.ts"])
+  subgraph "ipp5-adlibitum-esm-loader";
+    I_0_0(["Ipp5AdlibitumEsmLoader"]);
+  end;
+  M ----> I_0_0;
+  E_0 ----> M;
 ~~~~~
