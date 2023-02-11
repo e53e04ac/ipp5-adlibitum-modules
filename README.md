@@ -10,7 +10,7 @@ import { Ipp5AdlibitumModules } from 'e53e04ac/ipp5-adlibitum-modules';
 
 ~~~~~ mermaid
 graph RL;
-  A(["e53e04ac/ipp5-adlibitum-modules"]);
+  A(["package.json"]);
   subgraph "dependencies";
     B_0(["e53e04ac/hold"]);
     B_1(["e53e04ac/ipp5-adlibitum-esm-loader"]);
@@ -18,37 +18,42 @@ graph RL;
   subgraph "devDependencies";
     B_2(["@types/node"]);
   end;
-  A --reference--> B_0;
-  A --reference--> B_1;
-  A --reference--> B_2;
-  click B_0 "https://github.com/e53e04ac/hold/tree/2143f5f52192ae4156ea0af80d41c87c55355e9c";
-  click B_1 "https://github.com/e53e04ac/ipp5-adlibitum-esm-loader/tree/4a6a19db368c0283467d8bd7dc3a526d7109aebb";
+  A ----> B_0;
+  A ----> B_1;
+  A ----> B_2;
+  click B_0 "https://github.com/e53e04ac/hold/tree/285d028e225a7e75747417c3ed6b1ca0d5f52f6a";
+  click B_1 "https://github.com/e53e04ac/ipp5-adlibitum-esm-loader/tree/48b895277ced3af33e185b80bc4a9fe3238d594f";
   click B_2 "https://www.npmjs.org/package/@types/node/v/18.13.0";
 ~~~~~
 
 ~~~~~ mermaid
 graph LR;
-  subgraph "e53e04ac/ipp5-adlibitum-modules"
-    C0("index.mjs");
-    C1("index.d.ts");
+  A(["index.mjs"])
+  subgraph "node:fs";
+    B_0_0(["readFileSync"]);
   end;
-  subgraph "node:fs"
-    D0(["readFileSync"]);
+  subgraph "node:path";
+    B_1_0(["dirname"]);
+    B_1_1(["resolve"]);
   end;
-  subgraph "node:path"
-    D1(["dirname"]);
-    D2(["resolve"]);
+  subgraph "ipp5-adlibitum-esm-loader";
+    B_2_0(["Ipp5AdlibitumEsmLoader"]);
   end;
-  subgraph "ipp5-adlibitum-esm-loader"
-    D3(["Ipp5AdlibitumEsmLoader"]);
+  subgraph "hold";
+    B_3_0(["hold"]);
   end;
-  subgraph "hold"
-    D4(["hold"]);
+  B_0_0 ----> A;
+  B_1_0 ----> A;
+  B_1_1 ----> A;
+  B_2_0 ----> A;
+  B_3_0 ----> A;
+~~~~~
+
+~~~~~ mermaid
+graph LR;
+  A(["index.d.ts"])
+  subgraph "ipp5-adlibitum-esm-loader";
+    B_0_0(["Ipp5AdlibitumEsmLoader"]);
   end;
-  D0 --import--> C0;
-  D1 --import--> C0;
-  D2 --import--> C0;
-  D3 --import--> C0;
-  D4 --import--> C0;
-  D3 --import--> C1;
+  B_0_0 ----> A;
 ~~~~~
