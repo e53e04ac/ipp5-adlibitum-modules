@@ -5,7 +5,7 @@ npm install e53e04ac/ipp5-adlibitum-modules
 ~~~~~
 
 ~~~~~ mjs
-import { const Ipp5AdlibitumModules } from 'e53e04ac/ipp5-adlibitum-modules';
+import { Ipp5AdlibitumModules } from 'e53e04ac/ipp5-adlibitum-modules';
 ~~~~~
 
 ~~~~~ mermaid
@@ -21,8 +21,8 @@ graph RL;
   A ----> B_0;
   A ----> B_1;
   A ----> B_2;
-  click B_0 "https://github.com/e53e04ac/hold/tree/8fc3f6696d1c7ed6d184d90c5e33298cc9228991";
-  click B_1 "https://github.com/e53e04ac/ipp5-adlibitum-esm-loader/tree/3734dd4cc39b5b66e79912e72e9dbe7661eb9038";
+  click B_0 "https://github.com/e53e04ac/hold/tree/67e5b60f9bb3221f8b200107c13e89a604a93631";
+  click B_1 "https://github.com/e53e04ac/ipp5-adlibitum-esm-loader/tree/662bc42c729d9431d8671c4c8e3049e397e8c6fa";
   click B_2 "https://www.npmjs.org/package/@types/node/v/18.13.0";
 ~~~~~
 
@@ -56,7 +56,7 @@ graph RL;
 ~~~~~ mermaid
 graph RL;
   subgraph "e53e04ac/ipp5-adlibitum-modules";
-    E_0(["const Ipp5AdlibitumModules"]);
+    E_0(["Ipp5AdlibitumModules"]);
   end;
   M(["index.d.ts"])
   subgraph "ipp5-adlibitum-esm-loader";
