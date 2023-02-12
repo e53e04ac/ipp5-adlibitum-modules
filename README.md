@@ -22,7 +22,7 @@ graph RL;
   A ----> B_1;
   A ----> B_2;
   click B_0 "https://github.com/e53e04ac/hold/tree/b0b5ef032800af76c6e7ae27472dbf25a04a947d";
-  click B_1 "https://github.com/e53e04ac/ipp5-adlibitum-esm-loader/tree/05beb86300f0b88850a6aa3bf4c7fdbec194b117";
+  click B_1 "https://github.com/e53e04ac/ipp5-adlibitum-esm-loader/tree/4c4d661e9c965129153524ef6faf549ea901d5a6";
   click B_2 "https://www.npmjs.org/package/@types/node/v/18.13.0";
 ~~~~~
 
@@ -56,7 +56,8 @@ graph RL;
 ~~~~~ mermaid
 graph RL;
   subgraph "e53e04ac/ipp5-adlibitum-modules";
-    E_0(["const Ipp5AdlibitumModules"]);
+    E_0(["namespace Ipp5AdlibitumModules"]);
+    E_1(["const Ipp5AdlibitumModules"]);
   end;
   M(["index.d.ts"])
   subgraph "ipp5-adlibitum-esm-loader";
@@ -64,4 +65,5 @@ graph RL;
   end;
   M ----> I_0_0;
   E_0 ----> M;
+  E_1 ----> M;
 ~~~~~
