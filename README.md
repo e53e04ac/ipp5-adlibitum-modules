@@ -21,8 +21,8 @@ graph RL;
   A ----> B_0;
   A ----> B_1;
   A ----> B_2;
-  click B_0 "https://github.com/e53e04ac/hold/tree/5dd6f94b8ecd94f98219a7afae52320676380c27";
-  click B_1 "https://github.com/e53e04ac/ipp5-adlibitum-esm-loader/tree/ec57889dc649acf536a2d65b8f5b44dfb449eff3";
+  click B_0 "https://github.com/e53e04ac/hold/tree/b0b5ef032800af76c6e7ae27472dbf25a04a947d";
+  click B_1 "https://github.com/e53e04ac/ipp5-adlibitum-esm-loader/tree/05beb86300f0b88850a6aa3bf4c7fdbec194b117";
   click B_2 "https://www.npmjs.org/package/@types/node/v/18.13.0";
 ~~~~~
 
