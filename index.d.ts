@@ -4,11 +4,13 @@
     MIT License
 */
 
+import { EventEmitter } from 'event-emitter';
+import { Get } from 'hold';
 import { Ipp5AdlibitumEsmLoader } from 'ipp5-adlibitum-esm-loader';
 
 export declare namespace Ipp5AdlibitumModules {
 
-    type Get<T> = { (): T; };
+    type EventSpecs = Record<never, never>;
 
     type ModuleMap = Record<string, unknown>;
 
@@ -42,7 +44,7 @@ export declare namespace Ipp5AdlibitumModules {
         readonly adlibitumEsmLoader: Get<Ipp5AdlibitumEsmLoader>;
     };
 
-    type Self<TModuleMap extends ModuleMap> = {
+    type Self<TModuleMap extends ModuleMap> = EventEmitter<EventSpecs> & {
         readonly _Ipp5AdlibitumModules: Get<_Self<TModuleMap>>;
         readonly moduleNames: Get<string[]>;
         readonly defined: {
@@ -77,7 +79,7 @@ export declare namespace Ipp5AdlibitumModules {
                 readonly mainDir: string;
                 readonly moduleName: string;
                 readonly pathFromMainDir: string;
-            }): void;
+            }): Promise<void>;
         };
         readonly defineFromFiles: {
             (params: {
@@ -86,7 +88,7 @@ export declare namespace Ipp5AdlibitumModules {
                     readonly moduleName: string;
                     readonly pathFromMainDir: string;
                 }[];
-            }): void;
+            }): Promise<void>;
         };
         readonly require: {
             <TModuleName extends keyof TModuleMap>(moduleName: TModuleName): Promise<TModuleMap[TModuleName]>;

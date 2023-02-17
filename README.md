@@ -12,18 +12,21 @@ import { Ipp5AdlibitumModules } from 'e53e04ac/ipp5-adlibitum-modules';
 graph RL;
   A(["package.json"]);
   subgraph "dependencies";
-    B_0(["e53e04ac/hold"]);
-    B_1(["e53e04ac/ipp5-adlibitum-esm-loader"]);
+    B_0(["e53e04ac/event-emitter"]);
+    B_1(["e53e04ac/hold"]);
+    B_2(["e53e04ac/ipp5-adlibitum-esm-loader"]);
   end;
   subgraph "devDependencies";
-    B_2(["@types/node"]);
+    B_3(["@types/node"]);
   end;
   A ----> B_0;
   A ----> B_1;
   A ----> B_2;
-  click B_0 "https://github.com/e53e04ac/hold/tree/b0b5ef032800af76c6e7ae27472dbf25a04a947d";
-  click B_1 "https://github.com/e53e04ac/ipp5-adlibitum-esm-loader/tree/4c4d661e9c965129153524ef6faf549ea901d5a6";
-  click B_2 "https://www.npmjs.org/package/@types/node/v/18.13.0";
+  A ----> B_3;
+  click B_0 "https://github.com/e53e04ac/event-emitter/tree/93b9f205a7be92bb920d2d4f13efa78be7b4ba5d";
+  click B_1 "https://github.com/e53e04ac/hold/tree/b0b5ef032800af76c6e7ae27472dbf25a04a947d";
+  click B_2 "https://github.com/e53e04ac/ipp5-adlibitum-esm-loader/tree/4c4d661e9c965129153524ef6faf549ea901d5a6";
+  click B_3 "https://www.npmjs.org/package/@types/node/v/18.13.0";
 ~~~~~
 
 ~~~~~ mermaid
@@ -32,24 +35,28 @@ graph RL;
     E_0(["Ipp5AdlibitumModules"]);
   end;
   M(["index.mjs"])
-  subgraph "node:fs";
-    I_0_0(["readFileSync"]);
+  subgraph "node:fs/promises";
+    I_0_0(["readFile"]);
   end;
   subgraph "node:path";
     I_1_0(["dirname"]);
     I_1_1(["resolve"]);
   end;
-  subgraph "ipp5-adlibitum-esm-loader";
-    I_2_0(["Ipp5AdlibitumEsmLoader"]);
+  subgraph "event-emitter";
+    I_2_0(["EventEmitter"]);
   end;
   subgraph "hold";
     I_3_0(["hold"]);
+  end;
+  subgraph "ipp5-adlibitum-esm-loader";
+    I_4_0(["Ipp5AdlibitumEsmLoader"]);
   end;
   M ----> I_0_0;
   M ----> I_1_0;
   M ----> I_1_1;
   M ----> I_2_0;
   M ----> I_3_0;
+  M ----> I_4_0;
   E_0 ----> M;
 ~~~~~
 
@@ -60,10 +67,18 @@ graph RL;
     E_1(["const Ipp5AdlibitumModules"]);
   end;
   M(["index.d.ts"])
+  subgraph "event-emitter";
+    I_0_0(["EventEmitter"]);
+  end;
+  subgraph "hold";
+    I_1_0(["Get"]);
+  end;
   subgraph "ipp5-adlibitum-esm-loader";
-    I_0_0(["Ipp5AdlibitumEsmLoader"]);
+    I_2_0(["Ipp5AdlibitumEsmLoader"]);
   end;
   M ----> I_0_0;
+  M ----> I_1_0;
+  M ----> I_2_0;
   E_0 ----> M;
   E_1 ----> M;
 ~~~~~

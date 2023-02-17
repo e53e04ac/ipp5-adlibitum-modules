@@ -4,12 +4,13 @@
     MIT License
 */
 
-import { readFileSync as fsReadFileSync } from 'node:fs';
+import { readFile as fsReadFile } from 'node:fs/promises';
 import { dirname as pathDirname } from 'node:path';
 import { resolve as pathResolve } from 'node:path';
 
-import { Ipp5AdlibitumEsmLoader } from 'ipp5-adlibitum-esm-loader';
+import { EventEmitter } from 'event-emitter';
 import { hold } from 'hold';
+import { Ipp5AdlibitumEsmLoader } from 'ipp5-adlibitum-esm-loader';
 
 /** @type {import('.').Ipp5AdlibitumModules.Constructor} */
 const constructor = ((options) => {
@@ -61,6 +62,7 @@ const constructor = ((options) => {
 
     /** @type {import('.').Ipp5AdlibitumModules.Self<TModuleMap>} */
     const self = ({
+        ...EventEmitter({}),
         _Ipp5AdlibitumModules: (() => {
             return _self;
         }),
@@ -105,16 +107,16 @@ const constructor = ((options) => {
                 self.defineFromCode({ mainDir, ...module });
             }
         }),
-        defineFromFile: ((params) => {
+        defineFromFile: (async (params) => {
             const { mainDir, pathFromMainDir } = params;
             const path = pathResolve(mainDir, pathFromMainDir);
-            const code = fsReadFileSync(path, 'utf8');
+            const code = await fsReadFile(path, 'utf8');
             self.defineFromCode({ ...params, code });
         }),
-        defineFromFiles: ((params) => {
+        defineFromFiles: (async (params) => {
             const { mainDir, modules } = params;
             for (const module of modules) {
-                self.defineFromFile({ mainDir, ...module });
+                await self.defineFromFile({ mainDir, ...module });
             }
         }),
         require: (async (moduleName) => {

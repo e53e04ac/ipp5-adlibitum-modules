@@ -24,6 +24,7 @@
     "npm": ">=9.3.1"
   },
   "dependencies": {
+    "event-emitter": "github:e53e04ac/event-emitter",
     "hold": "github:e53e04ac/hold",
     "ipp5-adlibitum-esm-loader": "github:e53e04ac/ipp5-adlibitum-esm-loader"
   },
