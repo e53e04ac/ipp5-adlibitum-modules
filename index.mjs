@@ -18,7 +18,9 @@ const constructor = ((options) => {
     /** @typedef {Required<typeof options>['__GenericTypes__']} GenericTypes */
     /** @typedef {GenericTypes['TModuleMap']} TModuleMap */
 
-    const _options = ({});
+    const _options = ({
+        eval: options.eval,
+    });
 
     /** @type {import('.').Ipp5AdlibitumModules._Self<TModuleMap>} */
     const _self = ({
@@ -56,7 +58,9 @@ const constructor = ((options) => {
             return module;
         }),
         adlibitumEsmLoader: hold(() => {
-            return Ipp5AdlibitumEsmLoader({});
+            return Ipp5AdlibitumEsmLoader({
+                eval: _options.eval,
+            });
         }),
     });
 

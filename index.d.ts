@@ -24,6 +24,9 @@ export declare namespace Ipp5AdlibitumModules {
     };
 
     type Options<TModuleMap extends ModuleMap> = {
+        readonly eval: {
+            (f: string): Promise<unknown>;
+        };
         readonly __GenericTypes__?: {
             readonly TModuleMap: TModuleMap;
         };
