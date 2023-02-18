@@ -23,10 +23,10 @@ graph RL;
   A ----> B_1;
   A ----> B_2;
   A ----> B_3;
-  click B_0 "https://github.com/e53e04ac/event-emitter/tree/93b9f205a7be92bb920d2d4f13efa78be7b4ba5d";
-  click B_1 "https://github.com/e53e04ac/hold/tree/b0b5ef032800af76c6e7ae27472dbf25a04a947d";
-  click B_2 "https://github.com/e53e04ac/ipp5-adlibitum-esm-loader/tree/0d865487e8a8cc79a1a3dd724de3c85ee1dcfb5f";
-  click B_3 "https://www.npmjs.org/package/@types/node/v/18.13.0";
+  click B_0 "https://github.com/e53e04ac/event-emitter/tree/9a08c4203bfae12e94f36c9496c256c69fdd2277";
+  click B_1 "https://github.com/e53e04ac/hold/tree/49707680ccdf4c5673f64ff0bab30f408269b328";
+  click B_2 "https://github.com/e53e04ac/ipp5-adlibitum-esm-loader/tree/48cea56a50cbc4ba7581bf1fb8d96c39e18af924";
+  click B_3 "https://www.npmjs.org/package/@types/node/v/18.14.0";
 ~~~~~
 
 ~~~~~ mermaid
