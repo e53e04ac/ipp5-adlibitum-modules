@@ -10,8 +10,6 @@ import { Ipp5AdlibitumEsmLoader } from 'ipp5-adlibitum-esm-loader';
 
 export declare namespace Ipp5AdlibitumModules {
 
-    type EventSpecs = Record<never, never>;
-
     type ModuleMap = Record<string, unknown>;
 
     type DefineCallback<TModuleMap extends ModuleMap, ModuleName extends keyof TModuleMap> = {
@@ -31,6 +29,8 @@ export declare namespace Ipp5AdlibitumModules {
             readonly TModuleMap: TModuleMap;
         };
     };
+
+    type EventSpecs = Record<never, never>;
 
     type _Self<TModuleMap extends ModuleMap> = {
         readonly options: Get<Options<TModuleMap>>;
