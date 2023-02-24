@@ -5,7 +5,7 @@ npm install e53e04ac/ipp5-adlibitum-modules
 ~~~~~
 
 ~~~~~ mjs
-import { Ipp5AdlibitumModules } from 'e53e04ac/ipp5-adlibitum-modules';
+import { Ipp5AdlibitumModules } from 'ipp5-adlibitum-modules';
 ~~~~~
 
 ~~~~~ mermaid
@@ -20,9 +20,9 @@ graph RL;
     B_3(["@types/node"]);
   end;
   subgraph "github";
-    C_0(["e53e04ac/event-emitter\naea7d828d486572514f193752191206e0cbeeaa5"]);
-    C_1(["e53e04ac/hold\n593585d63bb24dc044f13a88375b53f9fa565229"]);
-    C_2(["e53e04ac/ipp5-adlibitum-esm-loader\n3991b3645f0aeed76ce35db25d3f3b63b57db797"]);
+    C_0(["e53e04ac/event-emitter\n1c42c278687d626fd9dbc9da241e899e482bac0d"]);
+    C_1(["e53e04ac/hold\nccd6d335b2be61f30045be782b2129d08a53ac67"]);
+    C_2(["e53e04ac/ipp5-adlibitum-esm-loader\na2b08b77b40b53a25885bf6b266c8b3425260c3d"]);
   end;
   subgraph "npmjs";
     C_3(["@types/node\n18.14.1"]);
@@ -35,9 +35,9 @@ graph RL;
   B_1 ----> C_1;
   B_2 ----> C_2;
   B_3 ----> C_3;
-  click C_0 "https://github.com/e53e04ac/event-emitter/tree/aea7d828d486572514f193752191206e0cbeeaa5";
-  click C_1 "https://github.com/e53e04ac/hold/tree/593585d63bb24dc044f13a88375b53f9fa565229";
-  click C_2 "https://github.com/e53e04ac/ipp5-adlibitum-esm-loader/tree/3991b3645f0aeed76ce35db25d3f3b63b57db797";
+  click C_0 "https://github.com/e53e04ac/event-emitter/tree/1c42c278687d626fd9dbc9da241e899e482bac0d";
+  click C_1 "https://github.com/e53e04ac/hold/tree/ccd6d335b2be61f30045be782b2129d08a53ac67";
+  click C_2 "https://github.com/e53e04ac/ipp5-adlibitum-esm-loader/tree/a2b08b77b40b53a25885bf6b266c8b3425260c3d";
   click C_3 "https://www.npmjs.com/package/@types/node/v/18.14.1";
 ~~~~~
 
