@@ -20,12 +20,12 @@ graph RL;
     B_3(["@types/node"]);
   end;
   subgraph "github";
-    C_0(["e53e04ac/event-emitter\n1c42c278687d626fd9dbc9da241e899e482bac0d"]);
-    C_1(["e53e04ac/hold\nccd6d335b2be61f30045be782b2129d08a53ac67"]);
-    C_2(["e53e04ac/ipp5-adlibitum-esm-loader\na2b08b77b40b53a25885bf6b266c8b3425260c3d"]);
+    C_0(["e53e04ac/event-emitter\n7e816a82855aca428d7cfe3b3600f54c0fef6c0c"]);
+    C_1(["e53e04ac/hold\n511bb6663491dadc6e2760a04ee3750996d069f8"]);
+    C_2(["e53e04ac/ipp5-adlibitum-esm-loader\na9e7a6805bd1f5d6207c284a5eb097a9e69e8969"]);
   end;
   subgraph "npmjs";
-    C_3(["@types/node\n18.14.1"]);
+    C_3(["@types/node\n18.14.2"]);
   end;
   A ----> B_0;
   A ----> B_1;
@@ -35,10 +35,10 @@ graph RL;
   B_1 ----> C_1;
   B_2 ----> C_2;
   B_3 ----> C_3;
-  click C_0 "https://github.com/e53e04ac/event-emitter/tree/1c42c278687d626fd9dbc9da241e899e482bac0d";
-  click C_1 "https://github.com/e53e04ac/hold/tree/ccd6d335b2be61f30045be782b2129d08a53ac67";
-  click C_2 "https://github.com/e53e04ac/ipp5-adlibitum-esm-loader/tree/a2b08b77b40b53a25885bf6b266c8b3425260c3d";
-  click C_3 "https://www.npmjs.com/package/@types/node/v/18.14.1";
+  click C_0 "https://github.com/e53e04ac/event-emitter/tree/7e816a82855aca428d7cfe3b3600f54c0fef6c0c";
+  click C_1 "https://github.com/e53e04ac/hold/tree/511bb6663491dadc6e2760a04ee3750996d069f8";
+  click C_2 "https://github.com/e53e04ac/ipp5-adlibitum-esm-loader/tree/a9e7a6805bd1f5d6207c284a5eb097a9e69e8969";
+  click C_3 "https://www.npmjs.com/package/@types/node/v/18.14.2";
 ~~~~~
 
 ~~~~~ mermaid
