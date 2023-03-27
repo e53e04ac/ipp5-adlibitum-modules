@@ -29,6 +29,6 @@
     "ipp5-adlibitum-esm-loader": "github:e53e04ac/ipp5-adlibitum-esm-loader"
   },
   "devDependencies": {
-    "@types/node": "^18.11.19"
+    "@types/node": "^18.15.10"
   }
 }
